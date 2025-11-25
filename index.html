@@ -11,45 +11,73 @@
 <h1>2 Army Battle Simulation</h1>
 
 <div class="armies-container">
-    <!-- Army 1 -->
-    <div class="army-card">
-        <h2>Army 1</h2>
-        <label>Army Name</label>
-        <input type="text" id="army1-name" value="Army 1">
+
+    <!-- ========================= -->
+<!--        ARMY 1 CARD        -->
+<!-- ========================= -->
+<div class="army-card">
+    <h2>Army 1</h2>
+
+    <label>Army Name</label>
+    <input type="text" id="army1-name" value="Army 1">
+
+    <!-- Troop dropdowns -->
+    <div class="troop-section">
+
+        <!-- Tank -->
+        <details>
+            <summary>Tank</summary>
+            <div class="troop-box">
+                <label>HP per unit</label>
+                <input type="number" id="a1-tank-hp" value="1000">
+
+                <label>Attack per unit</label>
+                <input type="number" id="a1-tank-atk" value="80">
+
+                <label>Attack speed (hits/sec)</label>
+                <input type="number" id="a1-tank-aspd" value="0.5">
+
+                <label>Defense per unit</label>
+                <input type="number" id="a1-tank-def" value="10">
+
+                <label>Number of units</label>
+                <input type="number" id="a1-tank-units" value="10">
+
+                <label>Penetration per unit</label>
+                <input type="number" id="a1-tank-pen" value="0">
+
+
+                <label>Position</label>
+                <select id="a1-tank-pos">
+                    <option value="front">Frontline</option>
+                    <option value="mid">Midline</option>
+                    <option value="back">Backline</option>
+                </select>
+            </div>
+        </details>
 
         <!-- Infantry -->
-        <fieldset>
-            <legend>Infantry</legend>
-            <div class="attr-row">
+        <details>
+            <summary>Infantry</summary>
+            <div class="troop-box">
                 <label>HP per unit</label>
                 <input type="number" id="a1-inf-hp" value="100">
-            </div>
-            <div class="attr-row">
+
                 <label>Attack per unit</label>
                 <input type="number" id="a1-inf-atk" value="10">
-            </div>
-            <div class="attr-row">
-                <label>Attack speed (hits/sec per unit)</label>
+
+                <label>Attack speed (hits/sec)</label>
                 <input type="number" id="a1-inf-aspd" value="1">
-            </div>
-            <div class="attr-row">
+
                 <label>Defense per unit</label>
                 <input type="number" id="a1-inf-def" value="0">
-            </div>
-            <div class="attr-row">
+
                 <label>Number of units</label>
                 <input type="number" id="a1-inf-units" value="50">
-            </div>
-            <div class="attr-row">
-                <label>Atk Increase %</label>
-                <input type="number" id="a1-inf-buff" value="0">
-            </div>
-            <div class="attr-row">
-            <label>Buff Frequency (attacks)</label>
-            <input type="number" id="a1-inf-freq" value="0">
-            </div>
 
-            <div class="attr-row">
+                <label>Penetration per unit</label>
+                <input type="number" id="a1-inf-pen" value="0">
+
                 <label>Position</label>
                 <select id="a1-inf-pos">
                     <option value="front">Frontline</option>
@@ -57,132 +85,128 @@
                     <option value="back">Backline</option>
                 </select>
             </div>
-        </fieldset>
-
-        <!-- Tank -->
-        <fieldset>
-            <legend>Tank</legend>
-            <div class="attr-row">
-                <label>HP per unit</label>
-                <input type="number" id="a1-tank-hp" value="1000">
-            </div>
-            <div class="attr-row">
-                <label>Attack per unit</label>
-                <input type="number" id="a1-tank-atk" value="80">
-            </div>
-            <div class="attr-row">
-                <label>Attack speed (hits/sec per unit)</label>
-                <input type="number" id="a1-tank-aspd" value="0.5">
-            </div>
-            <div class="attr-row">
-                <label>Defense per unit</label>
-                <input type="number" id="a1-tank-def" value="10">
-            </div>
-            <div class="attr-row">
-                <label>Number of units</label>
-                <input type="number" id="a1-tank-units" value="10">
-            </div>
-            <div class="attr-row">
-                <label>Atk Increase %</label>
-                <input type="number" id="a1-tank-buff" value="0">
-            </div>
-            <div class="attr-row">
-                <label>Buff Frequency (attacks)</label>
-                <input type="number" id="a1-tank-freq" value="0">
-            </div>
-
-            <div class="attr-row">
-                <label>Position</label>
-                <select id="a1-tank-pos">
-                    <option value="front">Frontline</option>
-                    <option value="mid" selected>Midline</option>
-                    <option value="back">Backline</option>
-                </select>
-            </div>
-        </fieldset>
+        </details>
 
         <!-- Sniper -->
-        <fieldset>
-            <legend>Sniper</legend>
-            <div class="attr-row">
+        <details>
+            <summary>Sniper</summary>
+            <div class="troop-box">
                 <label>HP per unit</label>
                 <input type="number" id="a1-sni-hp" value="80">
-            </div>
-            <div class="attr-row">
+
                 <label>Attack per unit</label>
                 <input type="number" id="a1-sni-atk" value="100">
-            </div>
-            <div class="attr-row">
-                <label>Attack speed (hits/sec per unit)</label>
+
+                <label>Attack speed (hits/sec)</label>
                 <input type="number" id="a1-sni-aspd" value="0.8">
-            </div>
-            <div class="attr-row">
+
                 <label>Defense per unit</label>
                 <input type="number" id="a1-sni-def" value="2">
-            </div>
-            <div class="attr-row">
+
                 <label>Number of units</label>
                 <input type="number" id="a1-sni-units" value="20">
-            </div>
-            <div class="attr-row">
-                <label>Atk Increase %</label>
-                <input type="number" id="a1-sni-buff" value="0">
-            </div>
-            <div class="attr-row">
-                <label>Buff Frequency (attacks)</label>
-                <input type="number" id="a1-sni-freq" value="0">
-            </div>
 
-            <div class="attr-row">
+                <label>Penetration per unit</label>
+                <input type="number" id="a1-sni-pen" value="0">
+
                 <label>Position</label>
                 <select id="a1-sni-pos">
                     <option value="front">Frontline</option>
                     <option value="mid">Midline</option>
-                    <option value="back" selected>Backline</option>
+                    <option value="back">Backline</option>
                 </select>
             </div>
-        </fieldset>
+        </details>
+
+    </div> <!-- END troop-section -->
+
+    <div class="skill-card">
+        <h3>Army 1 Skill</h3>
+
+        <details>
+            <summary>Increase Damage Skill</summary>
+            <div class="troop-box">
+                <label>Atk Increase %</label>
+                <input type="number" id="a1-skill-percent" value="10">
+
+                <label>Buff Frequency (attacks)</label>
+                <input type="number" id="a1-skill-frequency" value="5">
+
+                <button onclick="applySkill('a1')">Apply</button>
+            </div>
+        </details>
     </div>
 
-    <!-- Army 2 -->
-    <div class="army-card">
-        <h2>Army 2</h2>
-        <label>Army Name</label>
-        <input type="text" id="army2-name" value="Army 2">
+</div> <!-- END army-card -->
+
+
+
+
+    <!-- ========================= -->
+<!--        ARMY 2 CARD        -->
+<!-- ========================= -->
+<div class="army-card">
+    <h2>Army 2</h2>
+
+    <label>Army Name</label>
+    <input type="text" id="army2-name" value="Army 2">
+
+    <!-- Troop dropdowns -->
+    <div class="troop-section">
+
+        <!-- Tank -->
+        <details>
+            <summary>Tank</summary>
+            <div class="troop-box">
+                <label>HP per unit</label>
+                <input type="number" id="a2-tank-hp" value="1000">
+
+                <label>Attack per unit</label>
+                <input type="number" id="a2-tank-atk" value="80">
+
+                <label>Attack speed (hits/sec)</label>
+                <input type="number" id="a2-tank-aspd" value="0.5">
+
+                <label>Defense per unit</label>
+                <input type="number" id="a2-tank-def" value="10">
+
+                <label>Number of units</label>
+                <input type="number" id="a2-tank-units" value="10">
+
+                <label>Penetration per unit</label>
+                <input type="number" id="a2-tank-pen" value="0">
+
+                <label>Position</label>
+                <select id="a2-tank-pos">
+                    <option value="front">Frontline</option>
+                    <option value="mid">Midline</option>
+                    <option value="back">Backline</option>
+                </select>
+            </div>
+        </details>
 
         <!-- Infantry -->
-        <fieldset>
-            <legend>Infantry</legend>
-            <div class="attr-row">
+        <details>
+            <summary>Infantry</summary>
+            <div class="troop-box">
                 <label>HP per unit</label>
                 <input type="number" id="a2-inf-hp" value="100">
-            </div>
-            <div class="attr-row">
+
                 <label>Attack per unit</label>
                 <input type="number" id="a2-inf-atk" value="10">
-            </div>
-            <div class="attr-row">
-                <label>Attack speed (hits/sec per unit)</label>
+
+                <label>Attack speed (hits/sec)</label>
                 <input type="number" id="a2-inf-aspd" value="1">
-            </div>
-            <div class="attr-row">
+
                 <label>Defense per unit</label>
                 <input type="number" id="a2-inf-def" value="0">
-            </div>
-            <div class="attr-row">
+
                 <label>Number of units</label>
                 <input type="number" id="a2-inf-units" value="50">
-            </div>
-            <div class="attr-row">
-                <label>Atk Increase %</label>
-                <input type="number" id="a2-inf-buff" value="0">
-            </div>
-            <div class="attr-row">
-                <label>Buff Frequency (attacks)</label>
-                <input type="number" id="a2-inf-freq" value="0">
-            </div>
 
-            <div class="attr-row">
+                <label>Penetration per unit</label>
+                <input type="number" id="a2-inf-pen" value="0">
+
                 <label>Position</label>
                 <select id="a2-inf-pos">
                     <option value="front">Frontline</option>
@@ -190,93 +214,65 @@
                     <option value="back">Backline</option>
                 </select>
             </div>
-        </fieldset>
-
-        <!-- Tank -->
-        <fieldset>
-            <legend>Tank</legend>
-            <div class="attr-row">
-                <label>HP per unit</label>
-                <input type="number" id="a2-tank-hp" value="1000">
-            </div>
-            <div class="attr-row">
-                <label>Attack per unit</label>
-                <input type="number" id="a2-tank-atk" value="80">
-            </div>
-            <div class="attr-row">
-                <label>Attack speed (hits/sec per unit)</label>
-                <input type="number" id="a2-tank-aspd" value="0.5">
-            </div>
-            <div class="attr-row">
-                <label>Defense per unit</label>
-                <input type="number" id="a2-tank-def" value="10">
-            </div>
-            <div class="attr-row">
-                <label>Number of units</label>
-                <input type="number" id="a2-tank-units" value="10">
-            </div>
-            <div class="attr-row">
-                <label>Atk Increase %</label>
-                <input type="number" id="a2-tank-buff" value="0">
-            </div>
-            <div class="attr-row">
-                <label>Buff Frequency (attacks)</label>
-                <input type="number" id="a2-tank-freq" value="0">
-            </div>
-
-            <div class="attr-row">
-                <label>Position</label>
-                <select id="a2-tank-pos">
-                    <option value="front">Frontline</option>
-                    <option value="mid" selected>Midline</option>
-                    <option value="back">Backline</option>
-                </select>
-            </div>
-        </fieldset>
+        </details>
 
         <!-- Sniper -->
-        <fieldset>
-            <legend>Sniper</legend>
-            <div class="attr-row">
+        <details>
+            <summary>Sniper</summary>
+            <div class="troop-box">
                 <label>HP per unit</label>
                 <input type="number" id="a2-sni-hp" value="80">
-            </div>
-            <div class="attr-row">
+
                 <label>Attack per unit</label>
                 <input type="number" id="a2-sni-atk" value="100">
-            </div>
-            <div class="attr-row">
-                <label>Attack speed (hits/sec per unit)</label>
+
+                <label>Attack speed (hits/sec)</label>
                 <input type="number" id="a2-sni-aspd" value="0.8">
-            </div>
-            <div class="attr-row">
+
                 <label>Defense per unit</label>
                 <input type="number" id="a2-sni-def" value="2">
-            </div>
-            <div class="attr-row">
+
                 <label>Number of units</label>
                 <input type="number" id="a2-sni-units" value="20">
-            </div>
-            <div class="attr-row">
-                <label>Atk Increase %</label>
-                <input type="number" id="a2-sni-buff" value="0">
-            </div>
-            <div class="attr-row">
-                <label>Buff Frequency (attacks)</label>
-                <input type="number" id="a2-sni-freq" value="0">
-            </div>
 
-            <div class="attr-row">
+                <label>Penetration per unit</label>
+                <input type="number" id="a2-sni-pen" value="0">
+
+
                 <label>Position</label>
                 <select id="a2-sni-pos">
                     <option value="front">Frontline</option>
                     <option value="mid">Midline</option>
-                    <option value="back" selected>Backline</option>
+                    <option value="back">Backline</option>
                 </select>
             </div>
-        </fieldset>
+        </details>
+
+    </div> <!-- END troop-section -->
+
+    <div class="skill-card">
+        <h3>Army 2 Skill</h3>
+
+        <details>
+            <summary>Increase Damage Skill</summary>
+            <div class="troop-box">
+                <label>Atk Increase %</label>
+                <input type="number" id="a2-skill-percent" value="10">
+
+                <label>Buff Frequency (attacks)</label>
+                <input type="number" id="a2-skill-frequency" value="5">
+
+                <button onclick="applySkill('a2')">Apply</button>
+            </div>
+        </details>
     </div>
-</div>
+
+</div> <!-- END army-card -->
+
+</div> <!-- END armies-container -->
+
+
+
 
 <div class="controls">
     <button id="start-btn">Start Simulation</button>
